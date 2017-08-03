@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml" > 
+<head>
+  <title>How to add ColorPicker jQuery UI Widget.</title>
+	<!--loading jQuery UI and other css-->
+	<link id="jquiCSS" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/ui-lightness/jquery-ui.css" type="text/css" media="all">
+	<link href="css/demo.css" rel="stylesheet" /> 
+	<link href="css/evol.colorpicker.css" rel="stylesheet" />
+	
+	<!--loading jQuery and depended libs-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="js/evol.colorpicker.js" type="text/javascript"></script>
+</head>
+<body>   
+
+<h1 id="title">Colorpicker Demo</h1>
+
+<!--
+	name of the jQuery UI themes
+-->
+
+
+
+
+<!--Other Demo-->
+
+<div class="demoPanelc" style="width:130px;">
+	<input id="cpBoth" value="#31859b" />
+</div>
+<div style="clear:both;"/>
+
+<script type="text/javascript">
+/*
+	jQuery Document ready
+*/
+$(document).ready(function()
+{
+	/*
+		adding click event hanlder for theme links.
+		this handler will load the jQuery UI theme from the
+		html we have write in link.
+		it will load that theme to html dynamically
+	*/
+    $('.css').click(function()
+	{
+		/*
+			we have given jquiCSS id to link tag inside head section
+			below code replace old css with selected css.
+		*/
+        $('#jquiCSS').attr('href','http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/'+this.innerHTML+'/jquery-ui.css');
+    });
+	
+	// Events demo
+	
+	// Instanciate colorpickers
+	$('#cpBoth').colorpicker();
+	
+    $('#cpFocus').colorpicker(
+	{
+		showOn:'focus'
+	});
+	
+});
+</script>
+</body>
+</html>

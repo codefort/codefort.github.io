@@ -1,0 +1,22 @@
+{
+	"description": "The codefort A short description of what your package does",
+	"name": "codefort/codefort",
+	"type": "project",
+	"homepage": "http://moroz.rv.ua",
+	"license": "MIT",
+	"support": {
+		"forum": "http://moroz.rv.ua/",
+		"wiki": "http://moroz.rv.ua",
+		"source": "codefort.github.io"
+	},
+	"require": {
+		"php": ">=5.3.7"
+	},
+	"suggest": {
+		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*",
+		"phpunit/phpunit": "4.* || 5.*"
+	}
+}
